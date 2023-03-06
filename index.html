@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Calculator</title>
+</head>
+<body>
+    <h1><center>Currency Calculator</center></h1>
+    <h2>
+        <center>
+            <form action="convert" method="post">
+                {% csrf_token %}
+                <label for="from_lbl">from : </label>
+                <select name="cur_from" id="cur_from">
+                    <option value="AUD">AUD</option>
+                    <option value="USD">USD</option>
+                    <option value="DKK">USD</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CNY">CNY</option>
+                    <option value="CZK">CZK</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                </select> <br>
+                <label for="amt_lbl">Amount : </label>
+                <input type="text" name="amount" id="amount"><br>
+                <label for="to_lbl">to : </label>
+                <select name="cur_to" id="cur_to">
+                    <option value="AUD">AUD</option>
+                    <option value="USD">USD</option>
+                    <option value="DKK">USD</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CNY">CNY</option>
+                    <option value="CZK">CZK</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                </select><br>
+                <button type="submit">Convert</button>
+            </form>            
+        </center>
+    </h2>    
+</body>
+</html>
